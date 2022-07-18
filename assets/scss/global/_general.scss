@@ -1,0 +1,77 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'Roboto-black';
+    src: url('../assets/font/Roboto-black.ttf');
+}
+
+@font-face {
+    font-family: 'NotoSans-ThinItalic';
+    src: url('../assets/font/NotoSans-ThinItalic.ttf');
+}
+
+html {
+    font-size: 62.5%;
+    font-family: $font-principal;
+
+    body {
+        background-color: $primario;
+        padding: 10rem 0rem 0 0rem;
+
+        #container {
+            display: grid;
+            height: 100vh;
+            width: 100%;
+            grid-template-rows: auto;
+        }
+    }
+}
+
+h1 {
+    text-align: center;
+    margin: 4rem auto 4rem auto;
+    font-family: $font-title;
+    font-size: map-get($font-size, "small");
+    font-weight: bold;
+}
+
+h2 {
+    text-align: center;
+    margin: 4rem auto 4rem auto;
+    font-family: $font-title;
+    font-size: map-get($font-size, "small");
+    font-weight: bold;
+}
+
+
+// MEDIA QUERIES
+// TABLET
+@media screen and (min-width: 768px) {
+    h1 {
+        margin: 5rem auto 5rem auto;
+        font-size: map-get($font-size, "medium");
+    }
+
+    h2 {
+        margin: 5rem auto 5rem auto;
+        font-size: map-get($font-size, "medium");
+    }
+}
+
+
+// DESKTOP
+@media screen and (min-width:1024px) {
+    h1 {
+        margin: 6rem auto 6rem auto;
+        font-size: map-get($font-size, "large");
+    }
+
+    h2 {
+        margin: 6rem auto 6rem auto;
+        font-size: map-get($font-size, "large");
+    }
+}

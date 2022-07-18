@@ -1,0 +1,22 @@
+// ESTILO MAIN
+// mod estilo de bootstrap
+.conteiner {
+    .row {
+        .carousel {
+            @include marco (2rem, 1rem);
+            background-color: $white;
+
+            .carousel-control-prev-icon {
+                height: 6rem;
+                border-radius: 1.5rem;
+                background-color: crimson;
+            }
+
+            .carousel-control-next-icon {
+                height: 6rem;
+                border-radius: 1.5rem;
+                background-color: crimson;
+            }
+        }
+    }
+}

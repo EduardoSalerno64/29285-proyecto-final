@@ -1,0 +1,26 @@
+// ESTILO MAIN
+// mod estilo main de bootstrap
+.info_img {
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+
+    .pres {
+        width: 100%;
+    }
+}
+
+.row {
+    margin: 0rem auto 2rem auto;
+
+    .info_text--descripcion {
+        @include marco (2rem, 1rem);
+        background-color: $white;
+        width: 100%;
+        height: 100%;
+        text-align: left;
+        padding: 2rem 4rem 2rem 4rem;
+        font-family: $font-principal;
+        font-size: map-get($font-size, "ssmall") + 0.5;
+    }
+}

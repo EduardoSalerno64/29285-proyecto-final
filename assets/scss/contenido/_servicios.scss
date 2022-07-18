@@ -1,0 +1,173 @@
+// ESTILO MAIN
+// se aplico grid
+h3 {
+    text-align: center;
+    margin: 2rem auto;
+    font-family: $font-title;
+    font-size: map-get($font-size, "ssmall") + 1;
+    font-weight: bold;
+}
+
+.main {
+    .serv_par {
+        padding: 0 4rem 4rem 4rem;
+        margin: 0 auto;
+        width: auto;
+        max-width: 1200px;
+        text-align: center;
+        font-size: map-get($font-size, "ssmall");
+        line-height: 3rem;
+        text-align: left;
+    }
+
+    #serv {
+        padding: 4rem;
+        margin: 0 auto;
+        width: auto;
+        max-width: 1200px;
+        text-align: center;
+        font-size: map-get($font-size, "ssmall") + 0.5;
+        line-height: 3rem;
+        text-align: left;
+
+        .serv_menu {
+            padding: 0;
+            list-style: none;
+
+            .serv_item {
+                padding: 0.5rem;
+                width: auto;
+                margin: 0 auto;
+                font-size: map-get($font-size, "ssmall");
+                line-height: 2.5rem;
+                text-align: left;
+                color: $text-color;
+
+                a {
+                    text-decoration: none;
+                    color: $text-color;
+
+                    &:hover,
+                    &.active {
+                        border: solid 1px black;
+                        background: $white;
+                        color: red;
+                        transition: 0.5s ease all;
+                        transform: scale(1.2, 1.2);
+                        box-shadow: 0 10px 10px black;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.ejemplos {
+    margin: auto;
+    padding: 2rem;
+    display: grid;
+    grid-template-rows: repeat(10, auto);
+    height: auto;
+    gap: 2rem;
+    grid-area:
+        "ejemplos_1"
+        "ejemplos_2"
+        "ejemplos_3"
+        "ejemplos_4"
+        "ejemplos_5"
+        "ejemplos_6"
+        "ejemplos_7"
+        "ejemplos_8"
+        "ejemplos_9"
+        "ejemplos_10";
+
+    &>* {
+        @include marco (2rem, 1rem);
+        padding: 2rem;
+        background-color: white;
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        width: auto;
+    }
+
+    .title_her {
+        padding: 0 1rem 1rem 1rem;
+        text-align: left;
+        font-family: $font-title;
+        font-size: map-get($font-size, "ssmall");
+        font-weight: bold;
+    }
+}
+
+// mod estilo tabla de bootstrap
+#carac {
+    display: none;
+    padding: 2rem;
+    margin: 0 auto;
+    font-size: map-get($font-size, "ssmall");
+    line-height: 2rem;
+
+    .table {
+        @include marco (0rem, 1rem);
+        background-color: $white;
+
+        .table thead th {
+            vertical-align: top;
+        }
+
+        .table .thead-light th {
+            background-color: $secundario;
+        }
+    }
+}
+
+// MEDIA QUERIES
+// TABLET
+@media screen and (min-width: 768px) {
+    h3 {
+        font-size: map-get($font-size, "small") - 0.5;
+    }
+
+    .ejemplos {
+        margin: auto;
+        padding: 2rem 4rem 2rem 2rem;
+        display: grid;
+        grid-template-rows: repeat(5, auto);
+        grid-template-columns: 50% 50%;
+        height: auto;
+        gap: 2rem;
+        grid-area:
+            "ejemplos_1 ejemplos_2"
+            "ejemplos_3 ejemplos_4"
+            "ejemplos_5 ejemplos_6"
+            "ejemplos_7 ejemplos_8"
+            "ejemplos_9 ejemplos_10"
+        ;
+    }
+
+    .izq {
+        &:hover {
+            transition: 1s ease-in all;
+            transform: translate(50%, 0) scale(1.5, 1.5);
+            box-shadow: 0 10px 10px black;
+        }
+    }
+
+    .der {
+        &:hover {
+            transition: 1s ease-in all;
+            transform: translate(-50%, 0) scale(1.5, 1.5);
+            box-shadow: 0 10px 10px black;
+        }
+    }
+
+    .title_her {
+        font-size: map-get($font-size, "ssmall") + 0.5;
+    }
+
+    #carac {
+        display: block;
+        max-width: 1200px;
+    }
+}

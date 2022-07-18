@@ -1,0 +1,59 @@
+.logo_din--respuesta {
+    width: 20rem;
+    left: 50%;
+    position: relative;
+    top: 0rem;
+    transform: translate(-50%, 0%);
+
+    &:hover {
+        box-shadow: 2rem 2rem 4rem black;
+    }
+}
+
+.mensaje1 {
+    margin: 6rem auto 2rem auto;
+    padding: 0 1rem;
+    text-align: center;
+    font-family: $font-principal;
+    font-size: map-get($font-size, "ssmall") + 1;
+    font-weight: bold;
+}
+
+.mensaje2 {
+    margin: auto;
+    padding: 0 8rem 8rem 8rem;
+    text-align: center;
+    font-family: $font-principal;
+    font-size: map-get($font-size, "small");
+}
+
+// MEDIA QUERIES
+// TABLET
+@media screen and (min-width: 768px) {
+    .logo_din--respuesta {
+        width: 30rem;
+    }
+
+    .mensaje1 {
+        margin: 10rem auto 6rem auto;
+        padding: 0rem 3rem;
+        font-size: map-get($font-size, "small") + 1;
+    }
+
+    .mensaje2 {
+        font-size: map-get($font-size, "ssmall")+ 1;
+    }
+
+}
+
+// DESKTOP
+@media screen and (min-width:1024px) {
+    .mensaje1 {
+        font-size: map-get($font-size, "small") + 1;
+    }
+
+    .mensaje2 {
+        font-size: map-get($font-size, "ssmall") + 1;
+    }
+
+}
